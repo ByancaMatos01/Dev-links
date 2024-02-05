@@ -18,12 +18,10 @@ Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnolog
 
 <br>
 
-<p align="center">
-![image](https://github.com/ByancaMatos01/Dev-links/assets/122841376/e38cf51d-52c9-4dbe-ad65-2f964a239859)
-</p>
-<p align="center">
 ![image](https://github.com/ByancaMatos01/Dev-links/assets/122841376/ead14828-02b8-46c3-b442-85b2573dae24)
-</p>
+
+![image](https://github.com/ByancaMatos01/Dev-links/assets/122841376/6ec5c85a-67ae-491d-a6ae-34873056f03f)
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
