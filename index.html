@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +8,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="./assets/link-outline.svg" type="image/x-icon">
   <title>Dev links</title>
 </head>
 <body>
   <div id="container">
+
     <div id="profile">
-      <img src="./assets/avatar.png" alt=" foto do inosuke anime de demons layer sem fundo">
+      <img src="./assets/avatar.png">
       <p> @ByancaMatos</p>
     </div>
+
+    <div id="switch" onclick="toggleMode()">
+      <button></button>
+      <span></span>
+    </div>
+
     <ul>
       <li>
         <a href="https://github.com/ByancaMatos01" target="_blank">GitHuB</a>
@@ -27,6 +35,23 @@
         <a href="https://byancamatos01.github.io/Portifolio/" target="_blank">Portifólio</a>
       </li>
     </ul>
+    <div id="social-links">
+      <a href="https://github.com/ByancaMatos01" target="_blank">
+      <ion-icon name="logo-github"></ion-icon>
+      </a>
+      <a href="http://www.linkedin.com/in/byanca-matos-29204b1bb" target="_blank">
+      <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+      <a href="http://byancamatos01.github.io/Portifolio" target="_blank">
+      <ion-icon name="logo-web-component"></ion-icon>
+      </a>
+    </div>
+    <footer>
+      Feito com &#10084; pela  <a href="https://github.com/ByancaMatos01">Byanca Matos</a>
+    </footer>
   </div>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   <script src="script.js"></script>
 </body>
 </html>
