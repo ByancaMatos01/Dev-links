@@ -1,61 +1,62 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root{
+:root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
-  --stroke-color: rgba(255,255,255,0.5);
-  --surface-color:  rgba(255,255,255,0.1);
-  --surface-color-hover:rgba(255,255,255,0.05);
-  --highlight-color:rgba(255,255,255,0.2);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(assets/moon-stars.svg);
-
 }
-.light{
+.light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
-  --stroke-color: rgba(0,0,0,0.5);
-  --surface-color:  rgba(0,0,0,0.05);
-  --surface-color-hover:rgba(0,0,0,0.02);
-  --highlight-color:rgba(0,0,0,0.1);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
 }
-body{
+body {
   background-image: var(--bg-url);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  height: 100vh;
 }
-body *{
-  font-family: 'Inter',sans-serif;
+body * {
+  font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
-#container{
+#container {
   margin: auto;
-  width: 300px;
+  width: 100%;
+  max-width: 588px;
   margin-top: 56px auto 0px;
+  padding: 0 24px;
 }
 #profile {
   text-align: center;
   padding: 24px;
-
 }
-img{
+img {
   width: 112px;
 }
-#profile p{
+#profile p {
   font-weight: 500;
-  line-height:24px;
+  line-height: 24px;
   margin-top: 8px;
 }
-#switch{
+#switch {
   position: relative;
   width: 64px;
   margin: 4px auto;
 }
-#switch button{
+#switch button {
   width: 32px;
   height: 32px;
   background-color: white;
@@ -70,12 +71,17 @@ img{
   z-index: 1;
   transform: translateY(-58%);
   cursor: pointer;
+  animation: slide-back 0.4s;
 }
-.light #switch button{
-  right:0;
-  left:initial;
+.light #switch button {
+  right: 0;
+  left: initial;
+  animation: slide-in 0.4s forwards;
 }
-#switch span{
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+#switch span {
   display: block;
   width: 64px;
   height: 24px;
@@ -85,7 +91,7 @@ img{
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
-ul{
+ul {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -98,25 +104,25 @@ ul li a {
   padding: 16px 24px;
   background-color: var(--surface-color);
   border: 1px solid var(--stroke-color);
-  border-radius :8px;
-backdrop-filter: blur(4px);
--webkit-backdrop-filter: blur(4px);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   text-decoration: none;
   font-weight: 500;
   transition: background 0.2s;
 }
-ul li a:hover{
+ul li a:hover {
   background-color: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
 
-#social-links{
+#social-links {
   display: flex;
   padding: 24px 0;
   font-size: 24px;
   justify-content: center;
 }
-#social-links a{
+#social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,12 +130,37 @@ ul li a:hover{
   border-radius: 50%;
   transition: background 0.2s;
 }
-#social-links a:hover{
+#social-links a:hover {
   background-color: var(--highlight-color);
   padding: 16px;
 }
-footer{
+footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
 }
